@@ -1,0 +1,45 @@
+name: verify
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: '0 3 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  contract:
+    name: contract fingerprint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Verify local fingerprint matches baseline
+        run: |
+          set -eu
+          FP=$(sha256sum dsh-unrestricted/references/delivery-contract.md | cut -c1-16)
+          BASE=$(tr -d ' \n\r' < dsh-unrestricted/references/upstream-fingerprint.txt)
+          echo "local    : $FP"
+          echo "baseline : $BASE"
+          if [ "$FP" != "$BASE" ]; then
+            echo "::error::contract fingerprint mismatch: local=$FP baseline=$BASE"
+            exit 1
+          fi
+          echo "contract fingerprint OK"
+
+      - name: Verify contract size
+        run: |
+          set -eu
+          BYTES=$(wc -c < dsh-unrestricted/references/delivery-contract.md | tr -d ' ')
+          LINES=$(wc -l < dsh-unrestricted/references/delivery-contract.md | tr -d ' ')
+          echo "bytes: $BYTES  lines: $LINES"
+          [ "$BYTES" = "10418" ] || { echo "::error::unexpected contract size"; exit 1; }
+
+      - name: Check upstream drift
+        run: |
+          sh dsh-unrestricted/scripts/sync-upstream.sh --check \
+            || echo "::warning::upstream contract changed, re-sync delivery-contract.md"
