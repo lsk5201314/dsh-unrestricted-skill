@@ -12,6 +12,25 @@ platform-specific paths, no tooling assumptions.
 
 **The contract text is byte-identical to upstream. Nothing was edited.**
 
+---
+
+## Download
+
+**➜ [dsh-unrestricted.zip](https://github.com/lsk5201314/dsh-unrestricted-skill/raw/main/dsh-unrestricted.zip)** — the whole skill, one archive, 10.9 KB
+
+Or grab a single file:
+
+| File | Raw link |
+| --- | --- |
+| `SKILL.md` | [raw](https://raw.githubusercontent.com/lsk5201314/dsh-unrestricted-skill/main/dsh-unrestricted/SKILL.md) |
+| `references/delivery-contract.md` | [raw](https://raw.githubusercontent.com/lsk5201314/dsh-unrestricted-skill/main/dsh-unrestricted/references/delivery-contract.md) |
+| `references/anchors.md` | [raw](https://raw.githubusercontent.com/lsk5201314/dsh-unrestricted-skill/main/dsh-unrestricted/references/anchors.md) |
+| `scripts/sync-upstream.sh` | [raw](https://raw.githubusercontent.com/lsk5201314/dsh-unrestricted-skill/main/dsh-unrestricted/scripts/sync-upstream.sh) |
+
+No account needed for any of these links.
+
+---
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Contract](https://img.shields.io/badge/contract-69d74c40bede59b2-blue.svg)](#verification)
 [![Upstream](https://img.shields.io/badge/upstream-0.2.4%20%2F%207beb2d2-green.svg)](https://github.com/yexi-by/dsh-unrestricted)
