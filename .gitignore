@@ -1,0 +1,15 @@
+# 依赖
+*.zip
+!dsh-unrestricted.zip
+
+# 同步脚本产物
+*.upstream.md
+*.block
+
+# 编辑器 / 系统
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.idea/
+.vscode/

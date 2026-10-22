@@ -1,0 +1,42 @@
+# NOTICE
+
+本仓库是 [yexi-by/dsh-unrestricted](https://github.com/yexi-by/dsh-unrestricted) 的衍生作品。
+
+## 上游信息
+
+- 仓库：https://github.com/yexi-by/dsh-unrestricted
+- 协议：MIT
+- 版本：0.2.4
+- commit：`7beb2d2`
+- 版权：Copyright (c) 2025 yexi-by
+
+## 本仓库做了什么
+
+**原样搬入**（未修改任何字符）：
+
+- `dsh-unrestricted/references/delivery-contract.md`
+  ← 上游 `src/rules.js` 的 `EXECUTION_MODE_BLOCK` 常量
+  - 10418 字节 / 40 行
+  - SHA-256 前 16 位：`69d74c40bede59b2`
+  - 与上游 `contractFingerprint()` 同口径，可逐字比对
+
+**转述整理**：
+
+- `dsh-unrestricted/references/anchors.md`
+  ← 上游 `ANCHORS` 常量、`PRESET_RULES`、四处补注（`PERSONA_POINTER`、`PLAN_NOTE`、`PTC_ONLY_NOTE`、`STRUCTURED_OUTPUT_NOTE`）的原文摘录与形状说明
+
+**新增**：
+
+- `dsh-unrestricted/SKILL.md` —— Skill frontmatter 与触发契约
+- `dsh-unrestricted/scripts/sync-upstream.sh` —— 上游同步与指纹校验脚本
+- `README.md` / `NOTICE` / `LICENSE` —— 仓库文档
+
+## 未包含的内容
+
+上游的 TypeScript 实现（`src/`、`lib/`、`tests/`、`tools/`、`locale/`、`docs/`）未纳入本仓库。
+本仓库不含任何插件运行时代码，也不挂钩任何提示词流水线。
+
+## 协议
+
+契约正文的版权归上游作者所有，依 MIT 协议使用。
+本仓库的转换与文档部分同样以 MIT 发布，完整条款见 [LICENSE](LICENSE)。
