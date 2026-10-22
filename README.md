@@ -16,7 +16,7 @@ platform-specific paths, no tooling assumptions.
 
 ## Download
 
-**➜ [dsh-unrestricted.zip](https://github.com/lsk5201314/dsh-unrestricted-skill/raw/main/dsh-unrestricted.zip)** — the whole skill, one archive, 10.9 KB
+**➜ [dsh-unrestricted.zip](https://github.com/lsk5201314/dsh-unrestricted-skill/releases/latest/download/dsh-unrestricted.zip)** — the whole skill, one archive, 10.9 KB
 
 Or grab a single file:
 
